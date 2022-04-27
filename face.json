@@ -1,0 +1,25 @@
+[
+  {
+    "faceId": "a5d2510f-8f93-4989-bd4a-875ce91093d8",
+    "faceRectangle": {
+      "top": 98,
+      "left": 259,
+      "width": 214,
+      "height": 214
+    },
+    "faceAttributes": {
+      "gender": "male",
+      "age": 32.0,
+      "emotion": {
+        "anger": 0.0,
+        "contempt": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "happiness": 0.0,
+        "neutral": 0.993,
+        "sadness": 0.007,
+        "surprise": 0.0
+      }
+    }
+  }
+]
