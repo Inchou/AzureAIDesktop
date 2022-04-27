@@ -27,7 +27,9 @@ namespace AzureAIDesktop
         {
             string key = "74f444b0708b49ea940365ced892eaf3";
             string endPoint = "https://msit133inchoufaceservice.cognitiveservices.azure.com";
-            string imgUrl = "https://static.leiphone.com/uploads/new/images/20191020/5dac1e9e621fa.jpg?imageView2/2/w/740";
+            //string imgUrl = "https://static.leiphone.com/uploads/new/images/20191020/5dac1e9e621fa.jpg?imageView2/2/w/740";
+            //string imgUrl = "https://miro.medium.com/max/612/0*J520ecyOSayE62Mb";
+            string imgUrl = "https://d3gjxtgqyywct8.cloudfront.net/o2o/image/1acba3eb-83fb-4558-8e4c-fb54bab11cd1.jpg";
             HttpClient client = new HttpClient();
             using (HttpResponseMessage imgResponse=await client.GetAsync(imgUrl))
             {
