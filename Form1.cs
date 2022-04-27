@@ -59,7 +59,19 @@ namespace AzureAIDesktop
                 JObject face = item as JObject;
                 int age = Convert.ToInt32(face["faceAttributes"]["age"]);
                 string gender = Convert.ToString(face["faceAttributes"]["gender"]);
-                MessageBox.Show($"age:{age},gender:{gender}");
+                JObject emotion = JObject.Parse(Convert.ToString(face["faceAttributes"]["emotion"]));
+                double maxEmotion = 0;
+                string maxEmotionName = "";
+                foreach(JProperty prop in emotion.Properties())
+                {
+                    double propertyValue = double.Parse(emotion[prop.Name].ToString());
+                    if (propertyValue > maxEmotion)
+                    {
+                        maxEmotion = propertyValue;
+                        maxEmotionName = prop.Name;
+                    }
+                }
+                MessageBox.Show($"性別：{gender},年齡：{age},情緒：{maxEmotionName},信心指數：{maxEmotion*100:n2}%");
             }
         }
     }
